@@ -37,12 +37,17 @@ increasing its error rate. This can be done by repeatedly generating samples tha
 ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/ganloss.png)
 ## VAEGAN
 The term VAE-GAN is first introduced in the paper “Autoencoding beyond pixels using a learned similarity metric” by A. Larsen et. al. The authors suggested the combination of variational autoencoders and generative adversarial networks outperforms traditional VAEs.
+
 ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/model.png)
+
+
 The encoder encodes the data sample **_x_** into a latent representation **_z_** while the decoder tries to reconstruct **_x_** from the latent vector. This reconstruction is fed to the discriminator of the GAN in order to learn the higher-level sample similarity.The loss in VAEGAN is defined as:
 .
+
 ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/trueloss.png)
 
 The VAE and GAN is trained simultaneously using the loss function  which is composed of the prior regularization term from the encoder, the reconstruction error, and the style error from the GAN. However, this combined loss function is not applied on the entire network. A  the algorithm used in training the VAE/GAN network is shown below.
+
 
 ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/algorithm.png)
 
