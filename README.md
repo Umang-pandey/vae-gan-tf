@@ -1,4 +1,4 @@
-# vae-gan-tf
+# VAEGAN_tensorflow
 
 
 # Paper
@@ -13,10 +13,13 @@
 
 * **Year**: 2016.
 
-
+# Contributed by
+ [Umang Pandey](https://github.com/Umang-pandey)
 # Summary
 
-a variational autoencoder (VAE) is combined with a Generative Adversarial Network (GAN) in order to learn a higher level image similarity metric instead of the traditional element-wise metric. 
+a variational autoencoder (VAE) is combined with a Generative Adversarial Network (GAN) in order to learn a higher level image similarity metric instead of the traditional element-wise metric.
+
+## VAE
 
 ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/model.png)
 
@@ -32,8 +35,15 @@ The encoder encodes the data sample **_x_** into a latent representation **_z_**
 
 The VAE and GAN is trained simultaneously using the loss function  which is composed of the prior regularization term from the encoder, the reconstruction error, and the style error from the GAN. However, this combined loss function is not applied on the entire network. A  the algorithm used in training the VAE/GAN network is shown below.
 
-![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/algorithm.png)
 
+# Architecture
+ 
+ ## Encoder
+  ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/generator.png)
+ ## Discriminator
+  ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/dicriminator.png)
+ ## Decoder
+  ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/decoder.png)
 # Results
 
 ## Fashion MNIST 
@@ -45,7 +55,5 @@ The VAE and GAN is trained simultaneously using the loss function  which is comp
 ## MNIST
 ### After 500 Epochs
 ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/mnist_gif.gif)
-
-
 
 
