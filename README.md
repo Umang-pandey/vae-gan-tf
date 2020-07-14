@@ -43,6 +43,7 @@ The VAE and GAN is trained simultaneously using the loss function  which is comp
 
 
 ## MNIST
+### After 500 Epochs
 ![](https://github.com/Umang-pandey/vae-gan-tf/blob/master/images/mnist_gif.gif)
 
 
